@@ -1,0 +1,26 @@
+{
+    "name": "amir-hossein5/laravel-routin",
+    "description": "filters laravel application routes",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AmirHossein5\\Routin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Amir Hossein",
+            "email": "adada5116@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AmirHossein5\\Routin\\RoutinServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "orchestra/testbench": "^6.23"
+    }
+}
