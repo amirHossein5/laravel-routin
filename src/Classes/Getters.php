@@ -4,6 +4,11 @@ namespace AmirHossein5\Routin\Classes;
 
 trait Getters
 {
+    public function get()
+    {
+        return $this->allRoutes;
+    }
+
     public function getUri(): array
     {
         $routes = [];

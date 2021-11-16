@@ -22,11 +22,6 @@ class Routin
         return $this;
     }
 
-    public function get()
-    {
-        return $this->allRoutes;
-    }
-
     private function filterBy(string $filterBy, array $param = null): array
     {
         $allRoutes = [];
