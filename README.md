@@ -46,7 +46,7 @@ This package provides these filters:
 | ----------------------------------------|---------------------------------------------------------------------------|
 | uriStartsWith( string $uriStartsWith )  | where uri (/users/create) starts with something (here starts with **u**)  |
 | uriEndsWith( string $endsWith )         | where uri (/users/create) ends with something (here ends with **e**)      |
-| nameStartsWith( string $nameStartsWith )| where name (users.create) starts with something (here starts with **u**)  |
+| nameStartsWith( string $startsWith )    | where name (users.create) starts with something (here starts with **u**)  |
 | nameEndsWith( string $endsWith )        | where name (users.create) ends with something (here ends with **e**)      |
 | withoutParameter()                      | where route doesn't have any parameter                                    | 
 | method( string $method )                | where route's verb is $mehod                                              | 
