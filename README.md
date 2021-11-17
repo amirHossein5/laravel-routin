@@ -40,16 +40,16 @@ composer require amir-hossein5/laravel-routin
 
 ## Filters
 
-This package provides these filters:
+
 
 | filter                                      | description                     
-| ----------------------------------------|---------------------------------------------------------------------------|
-| uriStartsWith( string $uriStartsWith )  | where uri (/users/create) starts with something (here starts with **u**)  |
-| uriEndsWith( string $endsWith )         | where uri (/users/create) ends with something (here ends with **e** or **create**)|
-| nameStartsWith( string $startsWith )    | where name (users.create) starts with something (here starts with **u**)  |
-| nameEndsWith( string $endsWith )        | where name (users.create) ends with something (here ends with **e**)      |
-| withoutParameter()                      | where route doesn't have any parameter                                    | 
-| method( string $method )                | where route's verb is $mehod                                              | 
+| ----------------------------------------|---------------------------------------------------------------------------------------|
+| uriStartsWith( string  )                | where uri (/users/create) starts with something (here starts with **u** or **users**) |
+| uriEndsWith( string  )                  | where uri (/users/create) ends with something (here ends with **e** or **create**)    |
+| nameStartsWith( string  )               | where name (users.create) starts with something (here starts with **u** or **user**)  |
+| nameEndsWith( string  )                 | where name (users.create) ends with something (here ends with **e** or **create**)    |
+| withoutParameter()                      | where route doesn't have any parameter                                                | 
+| method( string  )                       | where route's verb is $mehod                                                          | 
 
 > Notice: There is no order for methods and but you have to use ::routes() at the begining.
 
