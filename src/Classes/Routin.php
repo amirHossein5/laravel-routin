@@ -10,11 +10,6 @@ class Routin
 
     private $allRoutes;
 
-    public function __construct()
-    {
-        $this->routes();
-    }
-
     public function routes(): Routin
     {
         $this->allRoutes = Route::getRoutes()->getRoutesByName();
