@@ -45,13 +45,13 @@ This package provides these filters:
 | filter                                      | description                     
 | ----------------------------------------|---------------------------------------------------------------------------|
 | uriStartsWith( string $uriStartsWith )  | where uri (/users/create) starts with something (here starts with **u**)  |
-| uriEndsWith( string $endsWith )         | where uri (/users/create) ends with something (here ends with **e**)      |
+| uriEndsWith( string $endsWith )         | where uri (/users/create) ends with something (here ends with **e** or **create**)|
 | nameStartsWith( string $startsWith )    | where name (users.create) starts with something (here starts with **u**)  |
 | nameEndsWith( string $endsWith )        | where name (users.create) ends with something (here ends with **e**)      |
 | withoutParameter()                      | where route doesn't have any parameter                                    | 
 | method( string $method )                | where route's verb is $mehod                                              | 
 
-> Notice: There is no order for methods and using ::routes() at the begining is optional.
+> Notice: There is no order for methods and but you have to use ::routes() at the begining.
 
 ## Getters
 

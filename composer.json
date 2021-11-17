@@ -7,6 +7,11 @@
             "AmirHossein5\\Routin\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "AmirHossein5\\Routin\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Amir Hossein",
