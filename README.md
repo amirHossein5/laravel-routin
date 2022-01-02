@@ -1,5 +1,5 @@
 This package provides searching between laravel application routes. 
-For example when user's going to create a menu item, have to link that to a page, but instead of writing manually you can put a select box with routes that taken in this way:
+For example when user's going to create a menu item, have to link that to a page, but instead of writing manually you can show your intended routes to select:
 
 ```php
 Routin::routes()
@@ -81,7 +81,7 @@ array:2 [▼
   "book.store" => Illuminate\Routing\Route {#1108 ▶}
 ]
 ```
-Returns **array** with **key of name** of routes which have filtered and **value of laravel's Illuminate\Routing\Route object** 
+Returns **array** with **key of name** and **value of laravel's Illuminate\Routing\Route object**.
 
 
 ### getUri()
@@ -100,7 +100,7 @@ array:3 [▼
   2 => "user/create"
 ]
 ```
-Returns **array** with **value of routes uri** 
+Returns **array** with **value of routes uri**.
 
 
 ### getParameters()
@@ -121,7 +121,7 @@ array:2 [▼
   ]
 ]
 ```
-Returns **array** with **key of name** of routes which have filtered and value, **array of parameters** 
+Returns **array** with **key of name** and value, **array of parameters**.
 
 
 ### getName()
@@ -142,9 +142,9 @@ array:7 [▼
   6 => "user.destroy"
 ]
 ```
-Returns **array** with **value of route's name** 
+Returns **array** with **value of route's name**.
 
-<br/>
+
 
 ## License
 
