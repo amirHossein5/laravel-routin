@@ -41,7 +41,6 @@ composer require amir-hossein5/laravel-routin
 ## Filters
 
 
-
 | filter                                      | description                     
 | ----------------------------------------|---------------------------------------------------------------------------------------|
 | uriStartsWith( string  )                | where uri (/users/create) starts with something (here starts with **u** or **users**) |
@@ -55,13 +54,31 @@ composer require amir-hossein5/laravel-routin
 
 ## Getters
 
-- [get()](#get)
-- [getUri()](#getUri)
-- [getParameters()](#getParameters)
-- [getName()](#getName)
-
 After filtering routes you need to get them by these methods:
 
+
+### Getting routes manually
+
+```php
+use AmirHossein5\Routin\Facades\Routin;
+
+
+Routin::routes()
+  ->withoutParameter()
+  ->get(fn ($route) => [
+    $route->uri => $route
+  ])
+  
+// output
+
+array:2 [▼
+  "user/create" => Illuminate\Routing\Route {#1109 ▶}
+  "book/{book}" => Illuminate\Routing\Route {#1108 ▶}
+  ...
+]
+```
+
+See available methods in [https://laravel.com/api/8.x/Illuminate/Routing/Route.html](https://laravel.com/api/8.x/Illuminate/Routing/Route.html)
 
 ### get()
 
