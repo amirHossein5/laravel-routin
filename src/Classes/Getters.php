@@ -2,10 +2,28 @@
 
 namespace AmirHossein5\Routin\Classes;
 
+use Closure;
+
 trait Getters
 {
-    public function get()
+    public function get(?Closure $closure = null)
     {
+        if ($closure instanceof Closure) {
+            $passedInArray = false;
+
+            $routes =  collect(array_values($this->allRoutes))
+                ->map(function ($route) use ($closure, &$passedInArray) {
+                    $passedInArray = is_array($closure($route));
+                    return $closure($route);
+                });
+
+            if ($passedInArray) {
+                $routes = $routes->flatMap(fn ($route) => $route);
+            }
+
+            return $routes->toArray();
+        }
+
         return $this->allRoutes;
     }
 

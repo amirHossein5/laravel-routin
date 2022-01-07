@@ -8,6 +8,60 @@ use Illuminate\Routing\Route;
 
 class GettersTest extends TestCase
 {
+    public function test_routes_can_be_get_manually_and_return_value_like_get_method()
+    {
+        $routes = Routin::routes()->get(
+            fn ($route) => [$route->getName() => $route]
+        );
+
+        $this->assertTrue(
+            collect(array_keys($routes))
+                ->diff(collect($this->routes['names']))
+                ->isEmpty()
+        );
+
+        foreach (array_values($routes) as $routeValue) {
+            $this->assertEquals($routeValue::class, Route::class);
+        }
+    }
+
+    public function test_routes_can_be_get_manually_and_return_value_like_get_uri_method()
+    {
+        $routes = Routin::routes()->get(fn ($route) => $route->uri);
+
+        $this->assertTrue(
+            collect($routes)
+                ->diff(collect($this->routes['uris']))
+                ->isEmpty()
+        );
+
+        $routes = Routin::routes()->get(fn ($route) => [$route->uri]);
+
+        $this->assertTrue(
+            collect($routes)
+                ->diff(collect($this->routes['uris']))
+                ->isEmpty()
+        );
+    }
+
+    public function test_routes_can_be_get_manually_and_return_value_like_get_name_method()
+    {
+        $routes = Routin::routes()->get(fn ($route) => $route->getName());
+        $this->assertEquals($routes, $this->routes['names']);
+
+        $routes = Routin::routes()->get(fn ($route) => [$route->getName()]);
+        $this->assertEquals($routes, $this->routes['names']);
+    }
+
+    public function test_value_in_manually_way_is_flat_mapped()
+    {
+        $routes = Routin::routes()->get(fn ($route) => [$route]);
+        $this->assertTrue(!is_array($routes[0]));
+
+        $routes = Routin::routes()->get(fn ($route) => $route);
+        $this->assertTrue(!is_array($routes[0]));
+    }
+
     public function test_get_method_returns_key_of_route_name()
     {
         $routes = Routin::routes()->get();
