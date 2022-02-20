@@ -2,12 +2,11 @@
 
 namespace AmirHossein5\Routin\Classes;
 
-use AmirHossein5\Routin\Classes\Routin;
 use Illuminate\Routing\Route as RouteItem;
 
 trait Filters
 {
-    public function uriStartsWith(string $uriStartsWith): Routin
+    public function uriStartsWith(string $uriStartsWith): self
     {
         $this->allRoutes = $this->filterBy(
             'uriStartsWith',
@@ -17,7 +16,7 @@ trait Filters
         return $this;
     }
 
-    public function uriEndsWith(string $endsWith): Routin
+    public function uriEndsWith(string $endsWith): self
     {
         $this->allRoutes = $this->filterBy(
             'uriEndsWith',
@@ -27,7 +26,7 @@ trait Filters
         return $this;
     }
 
-    public function nameStartsWith(string $nameStartsWith): Routin
+    public function nameStartsWith(string $nameStartsWith): self
     {
         $this->allRoutes = $this->filterBy(
             'nameStartsWith',
@@ -37,7 +36,7 @@ trait Filters
         return $this;
     }
 
-    public function nameEndsWith(string $endsWith): Routin
+    public function nameEndsWith(string $endsWith): self
     {
         $this->allRoutes = $this->filterBy(
             'nameEndsWith',
@@ -47,14 +46,14 @@ trait Filters
         return $this;
     }
 
-    public function withoutParameter(): Routin
+    public function withoutParameter(): self
     {
         $this->allRoutes = $this->filterBy('withoutParameter');
 
         return $this;
     }
 
-    public function method(string $method): Routin
+    public function method(string $method): self
     {
         $this->allRoutes = $this->filterBy(
             'method',

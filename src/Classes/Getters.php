@@ -2,13 +2,11 @@
 
 namespace AmirHossein5\Routin\Classes;
 
-use Closure;
-
 trait Getters
 {
-    public function get(?Closure $closure = null)
+    public function get(?\Closure $closure = null): array
     {
-        if ($closure instanceof Closure) {
+        if ($closure instanceof \Closure) {
             $passedInArray = false;
 
             $routes =  collect(array_values($this->allRoutes))

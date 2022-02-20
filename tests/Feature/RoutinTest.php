@@ -12,7 +12,7 @@ class RoutinTest extends TestCase
         $routes = Routin::routes()
             ->withoutParameter()
             ->method('get')
-            ->getUri();
+            -> ();
 
         $this->assertEquals(["user", "user/create"], $routes);
     }

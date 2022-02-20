@@ -2,7 +2,6 @@
 
 namespace AmirHossein5\Routin\Tests\Feature;
 
-use AmirHossein5\Routin\Facades\Calculator;
 use AmirHossein5\Routin\Facades\Routin;
 use AmirHossein5\Routin\Tests\TestCase;
 

@@ -10,7 +10,7 @@ class Routin
 
     private $allRoutes;
 
-    public function routes(): Routin
+    public function routes(): self
     {
         $this->allRoutes = Route::getRoutes()->getRoutesByName();
 
