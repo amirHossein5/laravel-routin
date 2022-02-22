@@ -9,9 +9,10 @@ trait Getters
         if ($closure instanceof \Closure) {
             $passedInArray = false;
 
-            $routes =  collect(array_values($this->allRoutes))
+            $routes = collect(array_values($this->allRoutes))
                 ->map(function ($route) use ($closure, &$passedInArray) {
                     $passedInArray = is_array($closure($route));
+
                     return $closure($route);
                 });
 
@@ -41,7 +42,7 @@ trait Getters
         $routes = [];
 
         foreach ($this->allRoutes as $route) {
-            preg_match_all("/\\{(.*?)\\}/", $route->uri, $matches);
+            preg_match_all('/\\{(.*?)\\}/', $route->uri, $matches);
             $routes[$route->getName()] = $matches[1];
         }
 

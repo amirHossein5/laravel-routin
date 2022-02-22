@@ -14,6 +14,6 @@ class RoutinTest extends TestCase
             ->method('get')
             ->getUri();
 
-        $this->assertEquals(["user", "user/create"], $routes);
+        $this->assertEquals(['user', 'user/create'], $routes);
     }
 }

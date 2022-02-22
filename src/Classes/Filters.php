@@ -64,8 +64,7 @@ trait Filters
     }
 
     /**
-     * Filter Conditions
-     *
+     * Filter Conditions.
      */
     private function isWithoutParameter(RouteItem $route): bool
     {

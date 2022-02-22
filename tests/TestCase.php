@@ -9,66 +9,64 @@ class TestCase extends \Orchestra\Testbench\TestCase
 {
     /**
      * Routes defined for testing.
-     * 
      */
-
     protected $routes = [
         'get' => [
             'user' => [
-                'name' => "user.index",
-                'parameters' => []
+                'name'       => 'user.index',
+                'parameters' => [],
             ],
             'user/create' => [
-                'name' => "user.create",
-                'parameters' => []
+                'name'       => 'user.create',
+                'parameters' => [],
             ],
             'user/{user}' => [
-                'name' => "user.edit",
+                'name'       => 'user.edit',
                 'parameters' => [
-                    'user'
-                ]
+                    'user',
+                ],
             ],
             'user/show' => [
-                'name' => "user.show",
+                'name'       => 'user.show',
                 'parameters' => [
-                    'user'
-                ]
+                    'user',
+                ],
             ],
         ],
 
         'post' => [
             'user' => [
-                'name' => "user.store",
-                'parameters' => []
-            ]
+                'name'       => 'user.store',
+                'parameters' => [],
+            ],
         ],
 
         'put' => [
             'user/{user}' => [
-                'name' => "user.update",
+                'name'       => 'user.update',
                 'parameters' => [
-                    'user'
-                ]
-            ]
+                    'user',
+                ],
+            ],
         ],
 
         'delete' => [
             'user/{user}' => [
-                'name' => "user.destroy",
+                'name'       => 'user.destroy',
                 'parameters' => [
-                    'user'
-                ]
-            ]
+                    'user',
+                ],
+            ],
         ],
 
         'names' => [
-            "user.index",
-            "user.create",
-            "user.store",
-            "user.show",
-            "user.edit",
-            "user.update",
-            "user.destroy"
+            'user.index',
+            'user.create',
+            'user.store',
+            'user.show',
+            'user.edit',
+            'user.update',
+            'user.destroy',
         ],
 
         'uris' => [
@@ -78,18 +76,18 @@ class TestCase extends \Orchestra\Testbench\TestCase
             'user/{user}',
             'user/{user}/edit',
             'user/{user}',
-            'user/{user}'
+            'user/{user}',
         ],
 
         'parameters' => [
-            "user.index" => [],
-            "user.create" => [],
-            "user.store" => [],
-            "user.show" => ['user'],
-            "user.edit" => ['user'],
-            "user.update" => ['user'],
-            "user.destroy" => ['user']
-        ]
+            'user.index'   => [],
+            'user.create'  => [],
+            'user.store'   => [],
+            'user.show'    => ['user'],
+            'user.edit'    => ['user'],
+            'user.update'  => ['user'],
+            'user.destroy' => ['user'],
+        ],
     ];
 
     public function setUp(): void

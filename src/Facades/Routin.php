@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Facade;
  * @method static array getParameters()
  * @method static array getUri()
  **/
-
 class Routin extends Facade
 {
     protected static function getFacadeAccessor()
