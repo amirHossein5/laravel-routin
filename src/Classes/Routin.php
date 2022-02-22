@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 class Routin
 {
-    use Filters, Getters;
+    use Filters;
+    use Getters;
 
     private $allRoutes;
 
@@ -24,7 +25,6 @@ class Routin
         $matches = '';
 
         foreach ($this->allRoutes as $route) {
-
             $matches = match ($filterBy) {
                 'method'           => $this->hasMethod($route, $param['method']),
                 'nameStartsWith'   => $this->isNameStartsWith($route, $param['nameStartsWith']),
