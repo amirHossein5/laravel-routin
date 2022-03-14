@@ -26,7 +26,7 @@ array:3 [▼
 
 ## Prerequisites
 
-- Laravel 8
+- Laravel ```^8.0|^9.0```
 - PHP 8 
 
 
