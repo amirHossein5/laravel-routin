@@ -1,4 +1,4 @@
-> :warning: This package is only for named routes.
+> :warning: This package just finds those routes, that have name.
 
 This package provides searching between laravel application routes. </br>
 For example when user's going to create a menu item, have to link that to a page, but instead of writing manually you can show your intended routes to select:
